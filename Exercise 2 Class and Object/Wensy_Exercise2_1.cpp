@@ -3,67 +3,36 @@
 
 using namespace std;
 
-char AmbilApaYangMerekaInginkan();
-
-class tollBooth{
-	private:
-  		unsigned int numCars;
-  		double jumlah;
-  		
-	public:
-	tollBooth(){
-   	numCars = 0;
-   	jumlah = 0;
-   	
+class employee{
+	private:	
+  	int emp_num;
+  	float emp_comp;
+  	
+ 	public:
+  	void entData(){
+  	
+   		cout <<"Masukan Nomor Pegawai :";
+   		cin >> emp_num;
+   		cout << "Masukan Jumlah Gaji Pegawai :" ;
+   		cin >> emp_comp;
+   		cout <<"\n=======================\n";
   }
-	void Membayar(){
-   		numCars++;
-   		jumlah+=0.50;
-  }
-  	void TidakMembayar(){
-   		numCars++;
-  }
-  	void display() {
-   		cout << "Jumlah Dari Semua Mobil yang dipilih : " << numCars << endl;
-   		cout << "Total Jumlah : " << jumlah << endl;
+  
+  	void display(){
+  		cout << "Pegawai\'s Number " << emp_num << endl;
+   		cout << "Pegawai\'s Salary " << emp_comp << endl;
   }
 };
 int main(){
-	tollBooth booth;
- 	char ApaYangMerekaInginkan;
- 	ApaYangMerekaInginkan = AmbilApaYangMerekaInginkan();
- 
- 	while(ApaYangMerekaInginkan!='e'){
-	  	switch(ApaYangMerekaInginkan){
-   			case('y'):
-    		cout << "Bayar" << endl << endl;
-    		booth.Membayar();
-    		ApaYangMerekaInginkan = AmbilApaYangMerekaInginkan();
-    
-    break;
-   		case('n'):
-    	cout << "Tidak Bayar" << endl << endl;
-    	booth.TidakMembayar();
-    	ApaYangMerekaInginkan = AmbilApaYangMerekaInginkan();
-    	
-    break;
-  		case('e'):
-    	cout << "Result" << endl << endl;
-    break;
-   		default:
-    		cout << "Input Yang di Masukan Salah" << endl;
-  }
- }
- booth.display();
-}
-
-char AmbilApaYangMerekaInginkan(){
-	char a;
- 		cout << "Tekan  p  untuk Bayar dan lanjut membeli." << endl;
- 		cout << "Tekan  n  untuk Membeli tanpa membayar." << endl;
- 		cout << "Tekan  s  untuk melihat hasil transaksi dan keluar." << endl;
- 		cout << "Tentukan Pilihanmu " << endl;
- 		a = getch();
- 		
- 		return a;
+	employee emp1, emp2, emp3;
+ 	cout << "Masukan data pegawai 1" << endl;
+ 	emp1.entData();
+ 	cout << "Masukan data pegawai 2" << endl;
+ 	emp2.entData();
+ 	cout << "Masukan data pegawai 3" << endl;
+ 	emp3.entData();
+ 	cout << "Total " << endl;
+ 	emp1.display();
+ 	emp2.display();
+ 	emp3.display();
 }
