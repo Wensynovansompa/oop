@@ -27,11 +27,15 @@ int main(){
 	employee emp1, emp2, emp3;
  	cout << "Masukan data pegawai 1" << endl;
  	emp1.entData();
+
  	cout << "Masukan data pegawai 2" << endl;
  	emp2.entData();
+
  	cout << "Masukan data pegawai 3" << endl;
  	emp3.entData();
+
  	cout << "Total " << endl;
+     
  	emp1.display();
  	emp2.display();
  	emp3.display();
